@@ -30,7 +30,7 @@ export default function StatsPage() {
   }, [code])
 
   function copyShort() {
-    const base = import.meta.env.VITE_API_URL_PROD
+    const base = "https://tinylink-1231.onrender.com"
     const short = `${base}/${code}`
     if (short) {
       try { navigator.clipboard.writeText(short) } catch {}
