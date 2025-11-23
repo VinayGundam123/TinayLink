@@ -30,7 +30,7 @@ export default function StatsPage() {
   }, [code])
 
   function copyShort() {
-    const base = (api.defaults.baseURL || '').replace(/\/$/, '')
+    const base = (api.defaults.baseURLPROD || '').replace(/\/$/, '')
     const short = `${base}/${code}`
     if (short) {
       try { navigator.clipboard.writeText(short) } catch {}
