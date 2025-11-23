@@ -89,7 +89,7 @@ const redirectByCode=async(req, res) => {
     if (!updated) {
       return res.status(404).json({ error: 'Not found' });
     }
-    return res.redirect(302, updated.target_url);
+    return res.redirect(302, updated.target_url.trim());
   } catch (err) {
     return res.status(500).json({ error: 'Server error' });
   }
